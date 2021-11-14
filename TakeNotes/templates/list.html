@@ -1,0 +1,16 @@
+
+
+
+
+
+
+
+
+
+{%for note in notes%}
+<form action="/read" method="post">
+    {% csrf_token %}
+    <input type="submit" value="{{note.title}}" name = "note_req"> <br>
+    <input type="hidden" value="{{note.title}}" name="form_type">
+</form>
+{%endfor%}

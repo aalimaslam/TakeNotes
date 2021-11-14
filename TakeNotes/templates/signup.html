@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load static%}
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGISTER | {{ websiteName }}</title>
+    <link rel="stylesheet" href="{% static 'style/signup.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="heading">REGISTER</h1>
+        <form method="post">
+            {% csrf_token %}
+            <div class="name-container">
+                <input type="text" name="firstName" id="" required placeholder="First Name*">
+                <input type="text" name="lastName" id="" required placeholder="Last Name*">
+            </div>
+            <div class="contactInfo">
+                <input type="email" name="email" id="" required placeholder="Enter Your Email*">
+                <input type="tel" name="Username" id="" required placeholder="Enter Your Username">
+            </div>
+            <div class="password">
+                <input type="password" name="password" placeholder="Enter Your Password*" id="password" required>
+                <input type="password" name="confirmPassword" placeholder="Confirm Your Password*" id="confirmPassword" required>
+            </div>
+            <div class="submitBtn">
+                <input type="submit" value="REGISTER">
+            </div>
+            <div class="additional-info">
+                <p>Already Have an Account? <a href='/signin'>Click Here</a></p>
+            </div>
+            <div class="additional-info">
+                <p>{%for message in messages%}{{message}}{%endfor%}</a></p>
+            </div>
+        </form>
+    </div>
+    <script src="{% static 'script/signup.css' %}"></script>
+</body>
+</html>

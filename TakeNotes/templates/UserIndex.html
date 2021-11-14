@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | {{ websiteName }}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'style/userIndex.css' %}">
+</head>
+
+<body>
+    <header class="flex j-between">
+        <div class="logo">
+            <img src="{% static 'logo.svg' %}" alt="" height='50px'>
+        </div>
+        <a href="/take">
+            <div class="addIcon"> 
+                <!-- kiss i am hero anrez ladka y 2 court of judge this is asraf judge it is dangerous of judge why two angrez ladka i am saving this for educational purposes it will be taught kn schools and universities hahaha -->
+                <i class='fas fa-plus-circle'></i>
+            </div>
+        </a>
+    </header>
+    <section id="main">
+         <!--now give me a kiss muuhhh i thlught i am send this i pressed enter aalim muje chadi aaahhhhhh okay by let me sleep don't disturb this hero he is ablut to sleep, probably lieing but i dont want to tslk to ypu cause i hate you fuck you muahhhh open it ,what ?this file oh my god thank you you are genius give me a -->
+
+        <!-- Cards Starts HERE  -->
+        {% for note in notes %}
+        <div class="container flex j-between">
+            <div class="text">
+                <h2 class="heading"> {{note.title}} </h2>
+                <h4 class="description">{{note.note|truncatechars:30}}</h4>
+            </div>
+            <div class="icons flex a-center">
+                <div class="icons-container flex j-center a-center">
+                    <form action="" method="post">
+                        {%csrf_token%}
+                        <button type="submit" value="{{note.title}}" name="note_req"><i class="fas fa-eye"></i></button>
+                        <input type="hidden" value="{{note.title}}" name="form_type">
+
+                    </form>
+                </div>
+                <div class="icons-container flex j-center a-center">
+                    <form action="" method="post">
+                        {%csrf_token%}
+                        <button type="submit" value="{{note.title}}" name="note_req"><i class="fas fa-edit"></i></button>
+                        <input type="hidden" value="EDIT" name="form_type">
+                    </form>
+                </div>
+                <div class="icons-container flex j-center a-center">
+                    <form action="" method="post">
+                        {%csrf_token%}
+                        <button type="submit" value="{{note.title}}" name="note_req"><i class="fas fa-trash"></i></button>
+                        <input type="hidden" value="DELETE" name="form_type">
+                    </form>
+                </div>
+            </div>
+        </div>
+        {%endfor%}
+
+        <!-- Card ENDS HERE  -->
+
+    </section>
+</body>
+
+</html>

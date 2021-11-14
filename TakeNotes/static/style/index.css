@@ -1,0 +1,183 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    color:white;
+    font-family: sans-serif;
+
+}
+body{
+    background:#031323;
+    overflow-x: hidden;
+}
+.wrap{
+    flex-wrap: wrap;
+}
+.flex{
+    display: flex;
+}
+.col{
+    flex-direction: column;
+}
+.a-center{
+    align-items: center;
+}
+.j-center{
+    justify-content: center;
+}
+.j-between{
+    justify-content:space-between;
+}
+.j-around{
+    justify-content: space-around;
+}
+header{
+    width:100vw;
+    padding:20px;
+}
+li{
+    list-style:none;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    width:50vw;
+    padding:10px;
+}
+.nav-item a{
+    letter-spacing: 3px;
+}
+button{
+    padding:10px 30px;
+    background:rgba(255,255,255,0.3);
+    border:none;
+    outline:none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.right-side,.left-side{
+    width:50vw;
+}
+.images-container{
+    width:80%;
+    height: 100%;
+    position: relative;
+}
+.images-container img{
+    width:70%;
+    position: absolute;
+}
+#home{
+    height:70vh;
+}
+.down-img{
+    top:0;
+    left:10%;
+}
+.up-img{
+    bottom:20%;
+    right:0;
+}
+.heading{
+    font-size: 2.5rem;
+}
+.text{
+    font-size:14px;
+    color:#aaa;
+    padding:10px;
+    text-align: justify;
+}
+.left-side{
+    padding:40px;
+    vertical-align: top;
+}
+.heading{
+    padding:10px;
+}
+.cta{
+    padding:10px;
+}
+.head{
+    font-size:2rem;
+    text-align: center;
+    padding:20px;
+}
+.card{
+    padding:10px 20px;
+    background:rgba(255,255,255,0.3);
+    width:25vw;
+    border-radius: 3px;
+}
+.card-heading{
+    font-size:1.8rem;
+    padding:10px;
+    text-align:center;
+}
+.role{
+    font-size: 1rem;
+    padding:0px 10px 10px 10px;
+    text-align:center;
+    color:#ccc;
+}
+.aalim,.umaid{
+    background:rgba(255,255,255,0.3);
+    padding:20px;
+    border-radius: 3px;
+}
+.img img{
+    height:200px;
+    width:200px;
+    border-radius: 50%;
+}
+.card-heading{
+    font-size:2rem;
+}
+.role{
+    font-size:1.3rem;
+}
+.social-icons{
+    width:100vw;
+    margin-top:20px;
+}
+.fab,.fas{
+    font-size: 2rem;
+    padding:20px;
+    margin:20px;
+    background: rgba(255,255,255,0.3);
+    border-radius: 50%;
+}
+
+/*SAY HELLO STARTS */
+
+form{
+    padding:30px;
+    background:rgba(255,255,255,0.3);
+    border-radius: 3px;
+}
+input{
+    padding:10px 30px;
+    background:rgba(255,255,255,0.3);
+    outline:none;
+    border:none;
+    color:white;
+    border-radius:3px
+}
+input::placeholder,textarea::placeholder{
+    color:#ccc;
+}
+.form-container{
+    padding:40px;
+}
+textarea{
+    background:rgba(255,255,255,0.3);
+    width:100%;
+    margin-top:10px;
+    padding:10px;
+    border:none;
+    outline:none;
+    resize: none;
+    height:100px;
+    margin-bottom:10px;
+}

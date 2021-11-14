@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static%}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | {{ websiteName }}</title>
+    <link rel="stylesheet" href="{% static 'style/login.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="heading">LOGIN</h1>
+        <form method="POST">
+            {% csrf_token %}
+            <div class="form-container">
+                <input type="text" name="loginUsername" placeholder="Enter Your Username..." id="">
+                <input type="password" name="loginPassword" placeholder="Enter Your Password..." id="">
+                <input type="submit" value="LOGIN">
+            </div>
+        <!-- </form> -->
+            <div class="additional-info">
+                <p>Don't Have an Account? <a href='/signup'>Click Here</a></p>
+                <p>Forgot Your Password? <a href='#'>Click Here</a></p>
+            </div>
+            {%for message in messages%}{{message}}{%endfor%}
+        </form>
+    </div>
+</body>
+</html>

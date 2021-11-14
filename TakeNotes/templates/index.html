@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | {{ websiteName }}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'style/index.css' %}">
+</head>
+<body>
+
+    <!-- HEADER STARTS -->
+    <header class='flex j-between'>
+        <div class="logo">
+            <img src="{% static 'logo.svg' %}"height='50px' class='logo'>
+        </div>
+        <div class="navigation">
+            <ul class="flex j-between">
+                <li class='nav-item'><a href='#home'>HOME</a></li>
+                <li class='nav-item'> <a href='#about'>ABOUT US</a> </li>
+                <li class='nav-item'> <a href='#sayhello'>SAY HELLO!</a></li>
+                <li class='nav-item'> <button> <a href="/signin">REGISTER/LOGIN</a> </button></li>
+            </ul>
+        </div>
+    </header>
+    <!-- HEADER ENDS  -->
+
+    <!-- HOME STARTS  -->
+    <section id="home" class='flex'>
+        <div class="left-side flex col j-center">
+            <div class="heading">
+                <h2>HELLO! WE ARE</h2>
+                <h1>DEVELOPERS!</h1>
+                <!--Learners, The Best-->
+            </div>
+            <div class="text">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti obcaecati nam reprehenderit est sequi fuga unde ex, quibusdam totam molestiae accusamus voluptates non maxime pariatur autem molestias soluta neque dicta nisi quaerat earum libero consequatur itaque! Iure modi labore et id voluptates aliquid, laborum sequi quas corrupti aspernatur magni excepturi.
+            </div>
+            <div class="cta">
+                <button><a href='/signup'>REGISTER</a></button>
+            </div>
+        </div>
+        <div class="right-side">
+            <div class="images-container flex">
+                <img src="{% static 'assets/img.png' %}" alt="Illustration" class='down-img'>
+                <img src="{% static 'assets/img.png' %}" alt="Illustration" class='up-img'>
+            </div>
+        </div>
+    </section>
+    <!-- HOME ENDS  -->
+
+
+    <!-- ABOUT US STARTS  -->
+    <section id="about">
+        <h1 class='head'>ABOUT US</h1>
+        <div class="about-container flex col">
+            <div class="cards-container flex j-around">
+                <div class="card flex col">
+                    <div class="img flex j-center a-center">
+                        <img src="https://www.f6s.com/content-resource/profiles/2691124_original.jpg" alt="aalim">
+                    </div>
+                    <div class="card-heading">Aalim</div>
+                    <div class="role">Frontend Developer</div>
+                    <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis illum, sequi similique est, odio aliquid impedit qui veniam vero minima quae voluptatibus consequuntur inventore a autem repellat. Hic, minima exercitationem!</div>
+                </div>
+                <div class="card">
+                    <div class="img flex j-center a-center">
+                        <img src="https://1.bp.blogspot.com/-8UsTyJCbfIQ/X4xLFLSQy5I/AAAAAAAAH4Q/suU98j8_1dI_seYQLcdKkL4pPPEldoppwCLcBGAsYHQ/s320/smile.jpg" alt="umaid">
+                    </div>
+                    <div class="card-heading">Umaid</div>
+                    <div class="role">Backend Developer</div>
+                    <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis illum, sequi similique est, odio aliquid impedit qui veniam vero minima quae voluptatibus consequuntur inventore a autem repellat. Hic, minima exercitationem!</div>
+                </div>
+            </div>
+            <div class="social-icons flex j-around a-center wrap">
+                <div class="aalim  flex j-between a-center">
+                    <a href='https://www.instagram.com/aalim_aslam'><i class='fab fa-instagram'></i></a>
+                    <a href='https:www.facebook.com/'>
+                        <i class='fab fa-facebook'></i>
+                    </a>
+                    <a href='https://www.github.com/aalimaslam'>
+                        <i class='fab fa-github'></i>
+                    </a>
+                    <a href='mailto:aalimaslam@pm.me'>
+                        <i class='fas fa-envelope'></i>
+                    </a>
+                    <a href='https://aalimaslambhatt.blogspot.com'>
+                        <i class='fab fa-blogger'></i>
+                    </a>
+                </div>
+                <div class="umaid flex j-between">
+                    <a href='https://www.instagram.com/sheikh.umaid'><i class='fab fa-instagram'></i></a>
+                    <a href='https://www.facebook.com/umaid.sheikh.737'>
+                        <i class='fab fa-facebook'></i>
+                    </a>
+                    <a href='https://www.github.com/SheikhUmaid'>
+                        <i class='fab fa-github'></i>
+                    </a>
+                    <a href='mailto:sheikhumaid03@gmail.com'>
+                        <i class='fas fa-envelope'></i>
+                    </a>
+                    <a href='https://sheikhumaid.blogspot.com'>
+                        <i class='fab fa-blogger'></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ABOUT US ENDS  -->
+
+
+
+    <!-- SAY HELLO STARTS -->
+    <section id="sayhello">
+        <h1 class="head">SAY HELLO!</h1>
+        <div class="form-container flex j-center a-center">
+            <form method="POST" class="flex col">
+                <div class="info">
+                    <input type="text" name='name' placeholder="Name...">
+                    <input type="email" name="email" placeholder="Email...">
+                </div>
+                <div class="message">
+                    <textarea name="message" id="" placeholder="Enter Your Message/Query Here..."></textarea>
+                </div>
+                <div class="submitBtn flex j-center a-center">
+                    <button type="submit">SEND</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <!-- SAY HELLO ENDS  -->
+
+</body>
+</html>

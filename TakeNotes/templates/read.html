@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load static%}
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View | {{ websiteName }} </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{%static 'style/read.css' %}">
+</head>
+<body>
+    <header class="flex j-between a-center">
+        <div class="logo">
+            <img src="{%static 'logo.svg' %}" height="50px" alt="">
+        </div>
+        <div class="nav-icons flex">
+            <form action="" method="post">
+                {%csrf_token%}
+                <button type="submit">
+                    <i class='fas fa-trash'></i>
+                    <input type="hidden" value="Delete" name="form_type">
+                </button>
+            </form>
+            <form action="">
+                <button>
+                    <i class='fas fa-edit'></i>
+                </button>
+            </form>
+        </div>
+    </header>
+    <section class="main">
+        <div class="heading">{{ note.title }}</div>
+        <div class="description">{{note.note}}</div>
+    </section>
+</body>
+</html>

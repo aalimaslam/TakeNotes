@@ -1,0 +1,63 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    background:#031323;
+}
+.flex{
+    display: flex;
+}
+.col{
+    flex-direction: column;
+}
+.a-center{
+    align-items: center;
+}
+.j-center{
+    justify-content: center;
+}
+.j-between{
+    justify-content:space-between;
+}
+header{
+    padding:20px;
+    width:100vw;
+}
+input{
+    background:transparent;
+    border:none;
+    outline:none;
+    color:white;
+    padding:5px;
+    font-size: 1.4rem;
+    border-bottom:2px solid white;
+}
+button[type=submit]{
+    padding:20px 20px;
+    background:rgba(255,255,255,0.3);
+    border:none;
+    border-radius: 7px;
+    outline:none;
+    cursor: pointer;
+}
+.fa-save{
+    font-size:1.5rem;
+    color:white;
+
+}
+form{
+    width:55vw;
+}
+textarea{
+    height:80vh;
+    width:100%;
+    outline:none;
+    border:none;
+    resize: none;
+    padding:20px;
+    font-size:1.2rem;
+    background:rgba(255,255,255,0.3);
+    color:white;
+}

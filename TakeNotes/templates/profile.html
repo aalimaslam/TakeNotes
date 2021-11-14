@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'style/profile.css' %}">
+</head>
+<body>
+    <header class="flex j-between">
+        <div class="logo">
+            <img src="{% static 'logo.svg' %}" height='50px' alt="">
+        </div>
+        <div class="logoutBtn">
+            <form action="" class="place-center col" method="post">
+                {% csrf_token %}
+                <button><i class="fas fa-power-off"></i>
+                        <br>
+                <small> Logout </small>
+            </button>
+            </form>
+        </div>
+    </header>
+    <section id="main">
+        <h1 class="heading">DETAILS</h1>
+        <form action="" class="place-center col">
+            <div class="row place-center wrap">
+                <input type="text" name="firstName" readonly placeholder="{{request.user.first_name}}">
+                <input type="text" name="lastName" readonly placeholder="{{request.user.last_name}}">
+                <input type="text" name="userName" readonly placeholder="{{request.user}}">
+            </div>
+            <div class="row place-center wrap">
+                <input type="email" name="email" readonly placeholder="{{request.user.email}}">
+                <input type="tel" name="mobileNumber" placeholder="Mobile Number" readonly>
+                <input type="password" value='*********' name="password"  readonly>
+            </div>
+        </form>
+            <div class="row place-center wrap">
+                <form action="/changebasicinfo" method="get">
+                <button>
+                    Change Basic Info
+                </button>
+            </form>
+                <form action="/changepassword" method="get">
+                    <button>
+                     Change Password
+                </button>
+            </form>
+            </div>
+        
+    </section>
+</body>
+</html>

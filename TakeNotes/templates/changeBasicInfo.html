@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Basic Info | {{ websiteName }}</title>
+    <link rel="stylesheet" href="{% static 'style/profile1.css' %}">
+    <link rel="stylesheet" href="{% static 'style/profile2.css' %}">
+</head>
+<body>
+    <header class="flex j-between">
+        <div class="logo">
+            <img src="./logo.svg" height='50px' alt="">
+        </div>
+        <div class="logoutBtn">
+            <form action="" class="place-center col">
+                <i class="fas fa-power-off"></i>
+                        <br>
+                <small>Save</small>
+            </form>
+        </div>
+    </header>
+    <section id="main">
+        <h1 class="heading">Change Basic Info</h1>
+        <form action="" class="place-center col">
+            <div class="row place-center wrap">
+                <input type="text" name="firstName" placeholder="First Name">
+                <input type="text" name="lastName" placeholder="Last Name">
+                <input type="text" name="userName" placeholder="USERNAME">
+            </div>
+            <div class="row place-center wrap">
+                <input type="email" name="email" placeholder="Email">
+                <input type="tel" name="mobileNumber" placeholder="Mobile Number" >
+                <input type="password" value='*********' name="password" >
+            </div>
+            <div class="row place-center wrap">
+                <button>
+                    <form action="">
+                        SAVE
+                    </form>
+                </button>
+            </div>
+        </form>
+    </section>
+</body>
+</html>
