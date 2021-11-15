@@ -3,5 +3,4 @@ gunicorn
 Pillow
 pytz
 whitenoise
-sqlite
 sqlparse
