@@ -25,7 +25,7 @@ SECRET_KEY = 'k1@hvcq4_agwac&o%%)5x812j74ri_r4d%w!)qora+s08q!id3'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['bc17-117-210-145-198.ngrok.io','*']
+ALLOWED_HOSTS = ['bc17-117-210-145-198.ngrok.io','*','127.0.0.1','https://thetakenotes.herokuapp.com/']
 
 
 # Application definition
